@@ -1,0 +1,19 @@
+package com.sunil486.tranx.spring_transactional_01;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.sunil486.tranx.spring_transactional_01.config.ProductConfig;
+import com.sunil486.tranx.spring_transactional_01.service.ProductService3;
+
+public class App3 {
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(ProductConfig.class);
+		context.registerShutdownHook();
+
+		ProductService3 productService3 = context.getBean("productService3", ProductService3.class);
+		productService3.saveProductInfo();
+
+		context.close();
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Address.java&apos; to &apos;hibernate-mapping-collection/src/main/java/com.sunil486.entity&apos;&#x0A;- Original project: &apos;hibernate-project-003&apos;&#x0A;- Destination element: &apos;hibernate-mapping-collection/src/main/java/com.sunil486.entity&apos;&#x0A;- Original element: &apos;com.sunil486.entity.Address.java&apos;" description="Copy compilation unit" destination="=hibernate-mapping-collection/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sunil486.entity" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sunil486.entity{Address.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1679936256584" units="1" version="1.0"/>
+</session>

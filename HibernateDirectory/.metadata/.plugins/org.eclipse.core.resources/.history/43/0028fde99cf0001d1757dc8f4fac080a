@@ -1,0 +1,19 @@
+package com.sunil486.tranx.spring_transactional_01.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sunil486.tranx.spring_transactional_01.dto.Product;
+import com.sunil486.tranx.spring_transactional_01.repo.ProductRepo;
+
+@Service
+public class ProductService {
+
+	@Autowired
+	private ProductRepo productRepo;
+
+	public void saveProductInfo(Product product) {
+		productRepo.saveProduct(product);
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.sunil486.tranx.spring_transactional_01.aop;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class DataSourceAspect {
+
+	@Around("target(javax.sql.DataSource)")
+	public Object logBeforeAfterMethodCall(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+
+		// before
+		String name = proceedingJoinPoint.getSignature().getName();
+		System.out.println("method started " + name);
+
+		// call to your method
+		Object returnValue = proceedingJoinPoint.proceed();
+		System.out.println("method return value " + returnValue);
+
+		// after the method executed
+		System.out.println("method completed " + name);
+
+		return returnValue;
+	}
+
+}

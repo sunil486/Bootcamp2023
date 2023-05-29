@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.sunil486.designpattern&apos; to &apos;com.sunil486.concept.reflection&apos;&#x0A;- Original project: &apos;ReflectionConcept&apos;&#x0A;- Original element: &apos;ReflectionConcept/src/com.sunil486.designpattern&apos;&#x0A;- Renamed element: &apos;ReflectionConcept/src/com.sunil486.concept.reflection&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.sunil486.designpattern&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.sunil486.designpattern" name="com.sunil486.concept.reflection" qualified="false" references="true" stamp="1677252638168" textual="false" version="1.0"/>
+</session>

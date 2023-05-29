@@ -1,0 +1,5 @@
+package com.sunil486.tranx.spring_transactional_01.repo;
+
+public class ProductRepo {
+
+}

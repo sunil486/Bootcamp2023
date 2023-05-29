@@ -1,0 +1,6 @@
+127.0.0.1 - - [21/Apr/2023:21:22:54 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [21/Apr/2023:21:22:55 +0530] "GET /first-mvc-project/ HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [21/Apr/2023:21:24:51 +0530] "GET /first-mvc-project/hello HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [21/Apr/2023:21:24:55 +0530] "GET /first-mvc-project/hello HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [21/Apr/2023:21:25:19 +0530] "GET /first-mvc-project/hello HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [21/Apr/2023:21:25:20 +0530] "GET /first-mvc-project/hello HTTP/1.1" 404 779

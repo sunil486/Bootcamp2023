@@ -1,0 +1,16 @@
+package com.sunil486.tranx.spring_transactional_01.repo;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ProductRepo {
+
+	JdbcTemplate jdbcTemplate;
+
+	public void saveProduct() {
+
+		String query = "INSERT INTO product VALUES(?,?)";
+	}
+
+}

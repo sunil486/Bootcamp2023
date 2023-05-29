@@ -1,0 +1,31 @@
+package com.sunil486.tranx.spring_transactional_01.repo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sunil486.tranx.spring_transactional_01.dto.Product;
+
+@Repository
+public class ProductRepo {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	//@Transactional
+	@Transactional(propagation=Propagation.REQUIRES_NEW)
+	//This will not create a new transaction if transaction already started
+	//Because propagation level is REQUIRED
+	//Hence we can comment @Transactional
+	public void saveProduct(Product product) {
+
+		String insertQuery = "INSERT INTO product VALUES(?,?)";
+
+		Object[] args = { product.getId(), product.getName() };
+
+		jdbcTemplate.update(insertQuery, args);
+	}
+
+}

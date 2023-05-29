@@ -1,0 +1,16 @@
+package com.sunil486.tranx.spring_transactional_01.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+//What code need to be here i.e non-functional code or non-business code
+public class CallTracker {
+	
+	public void logBeforeMethodCall() {
+		
+		System.out.println("method is starting....");
+	}
+
+}

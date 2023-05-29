@@ -1,0 +1,14 @@
+package com.sunil486.love.calculator.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages="com.sunil486.love.calculator.controllers")
+public class LoveCalculatorAppConfig {
+	
+	//set up my view resolver
+	
+	
+
+}

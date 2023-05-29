@@ -1,0 +1,26 @@
+package com.sunil486.tranx.spring_transactional_01.config;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+@Configuration
+@ComponentScan(basePackages = "com.sunil486")
+public class ProductConfig {
+
+	@Bean
+	private DataSource datasource() {
+
+		return new DataSource("jdbc:mysql://localhost:3306/NewProduct", "root", "rootadmin");
+	}
+
+	@Bean
+	private JdbcTemplate jdbcTemplate() {
+
+		return new JdbcTemplate();
+	}
+
+}

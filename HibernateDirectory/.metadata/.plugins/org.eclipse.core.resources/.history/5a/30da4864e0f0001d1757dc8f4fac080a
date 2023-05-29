@@ -1,0 +1,24 @@
+package com.sunil486.tranx.spring_transactional_01.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+//What code need to be here i.e non-functional code or non-business code
+public class CallTracker {
+
+	@Pointcut("com.sunil486.tranx.spring_transactional_01.service.*")
+	public void logMethodPointCut() {
+
+	}
+
+	@Before("logMethodPointCut()")
+	public void logBeforeMethodCall() {
+
+		System.out.println("method is starting....");
+	}
+
+}

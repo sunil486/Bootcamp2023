@@ -1,0 +1,8 @@
+package com.sunil486.love.calculator.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class LoveCalculatorAppConfig {
+
+}

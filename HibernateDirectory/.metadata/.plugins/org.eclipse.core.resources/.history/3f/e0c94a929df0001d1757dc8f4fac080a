@@ -1,0 +1,11 @@
+package com.sunil486.tranx.spring_transactional_01;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.sunil486.tranx.spring_transactional_01.config.ProductConfig;
+
+public class App {
+	public static void main(String[] args) {
+		new AnnotationConfigApplicationContext(ProductConfig.class);
+	}
+}

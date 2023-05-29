@@ -1,0 +1,35 @@
+package com.sunil486.tranx.spring_transactional_01.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sunil486.tranx.spring_transactional_01.dto.Product;
+import com.sunil486.tranx.spring_transactional_01.repo.ProductRepo;
+
+@Service
+public class ProductService {
+
+	@Autowired
+	private ProductRepo productRepo;
+
+	@Transactional
+	public void saveProductInfo() {
+
+		// create a product to save it
+
+		for (int i = 0; i < 10; i++) {
+			Product product = new Product();
+			product.setId(i + 1);
+			product.setName("Product no. " + i + 1);
+			productRepo.saveProduct(product);
+			System.out.println("Product no. " + (i + 1) + "saved");
+
+			if (i == 6) {
+				throw new RuntimeException("Some error occured");
+			}
+		}
+		System.out.println("Product saved successfully");
+	}
+
+}

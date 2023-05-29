@@ -1,0 +1,27 @@
+package com.sunil486.tranx.spring_transactional_01.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+//What code need to be here i.e non-functional code or non-business code
+public class CallTracker {
+
+	// @Pointcut("within(com.sunil486.tranx.spring_transactional_01.service.*)")
+	@Pointcut("within(com.sunil486.tranx.spring_transactional_01.service.*) || within(com.sunil486.tranx.spring_transactional_01.repo.*)")
+	public void logMethodPointCut() {
+
+	}
+
+	// When the logic of this method run==> before/after/before and after
+	// This is call advice
+	@Before("logMethodPointCut()")
+	public void logBeforeMethodCall() {
+
+		System.out.println("method is starting....");
+	}
+
+}
